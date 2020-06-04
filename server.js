@@ -11,7 +11,7 @@ app.get("/", (req, res) => res.sendFile(__dirname + "/index.html"));
 
 app.post("/", (req, res) => {
     const query = req.body.cityData;
-    const apiKey = "";
+    const apiKey = "9a3b884367dbd35b9cab58b19d02da35";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${apiKey}&units=imperial`;
     https.get(url, (response) => {
         response.on("data", (data) => {
